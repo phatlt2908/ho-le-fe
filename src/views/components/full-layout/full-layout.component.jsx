@@ -1,19 +1,11 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./full-layout.styles.scss";
+import Nav from "../navigation-bar/navigation-bar.component";
 
-const FullLayout = ({ children }) => {
+const FullLayout = () => {
   return (
     <div className="full-layout-container">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/member-list">Member list</Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
       <Outlet />
       <div>Footer</div>
     </div>
